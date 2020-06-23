@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="stylefirst.css">
+    <style>
+      body{
+          background-color: #a8df65;
+      }
+    </style>
+  </head>
+  <body >
+    <h3>
+      <b>SERVICES OFFERED</b>
+    </h3>
+    <ul>
+      <li>Farming Machineries</li>
+      <li>Rice supplies</li>
+      <li>Sugar cane and sugar products</li>
+    </ul>
+    <h3>You can enter the name and service which you want.</h3>
+      <ol>
+        <p>
+          <i><b>Enter service needed &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;Enter your name</i></b>
+        </p>
+      <input type="text" id="textid" name="textinput" value="">
+      <input type="text" id="textid" name="textinput" value="">
+      <button id="add_newbook"><b>ADD SERVICE</b></button>
+      <button id="delete_newbook"><b>DELETE SERVICE</b></button>
+      <ol id="read_id">
+    
+<script type="application/javascript">
+
+   var ol=document.getElementById("read_id");
+
+   var tempbutton=document.getElementById("add_newbook");
+   var tempbutton2=document.getElementById("delete_newbook");
+   tempbutton.addEventListener("click",function()
+   {
+
+        var tempinput=document.getElementById("textid").value;
+
+        var li=document.createElement("li");
+
+        var nodeinput=document.createTextNode(tempinput);
+
+        li.appendChild(nodeinput);
+
+        ol.appendChild(li);
+        //console.log("button clicked");
+         console.log(tempinput);
+} );
+tempbutton2.addEventListener("click",function(){
+     var tempinput=document.getElementById("textid").value;
+     ol.removeChild(ol.childNodes[0]);
+     //console.log("button clicked");
+      console.log(tempinput);
+});
+
+   Welcome,
+  </body>
+</html>
